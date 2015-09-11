@@ -14,4 +14,8 @@ describe("findReplace", function() {
   it("will replace correctly even if partial word", function() {
     expect(findReplace("How much wood could a woodchuck chuck?", "chuck", "peck")).to.equal("How much wood could a woodpeck peck?")
   })
+
+  it("will replace correctly regardless of case", function() {
+    expect(findReplace("How much? how much?", "how", "Too")).to.equal("Too much? Too much?")
+  })
 })
